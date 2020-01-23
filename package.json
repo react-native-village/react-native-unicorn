@@ -7,7 +7,8 @@
     "android": "react-native run-android",
     "lint": "esw storybook/**",
     "lint-watch": "esw -w --changed storybook/**",
-    "postinstall": "cd ./ios && pod install && cd .."
+    "postinstall": "cd ./ios && pod install && cd ..",
+    "storybook": "start-storybook -p 7007"
   },
   "precommit": "lint",
   "prettier": {
@@ -30,6 +31,7 @@
     "prop-types": "^15.7.2",
     "react": "16.9.0",
     "react-native": "0.61.5",
+    "react-native-emoji": "^1.8.0",
     "react-native-vector-icons": "^6.6.0"
   },
   "devDependencies": {
