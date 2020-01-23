@@ -1,29 +1,27 @@
-import {AppRegistry} from 'react-native';
-import {getStorybookUI, configure} from '@storybook/react-native';
+import { AppRegistry } from 'react-native'
+import { getStorybookUI, configure } from '@storybook/react-native'
 
-import './rn-addons';
+import './rn-addons'
 
 // import stories
 configure(() => {
-  require('./stories');
-}, module);
+  require('./stories')
+}, module)
 
 // Refer to https://github.com/storybookjs/storybook/tree/master/app/react-native#start-command-parameters
 // To find allowed options for getStorybookUI
 const StorybookUIRoot = getStorybookUI({
   asyncStorage:
-    require('@react-native-community/async-storage').AsyncStorage ||
-    require('react-native').AsyncStorage ||
-    null,
+    require('@react-native-community/async-storage').AsyncStorage || require('react-native').AsyncStorage || null,
   port: 7007,
   host: '0.0.0.0',
   onDeviceUI: false,
   resetStorybook: true,
-  disableWebsockets: true,
-});
+  disableWebsockets: true
+})
 
 // If you are using React Native vanilla and after installation you don't see your app name here, write it manually.
 // If you use Expo you can safely remove this line.
-AppRegistry.registerComponent('%APP_NAME%', () => StorybookUIRoot);
+AppRegistry.registerComponent('%APP_NAME%', () => StorybookUIRoot)
 
-export default StorybookUIRoot;
+export default StorybookUIRoot

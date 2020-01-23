@@ -7,7 +7,7 @@
     "android": "react-native run-android",
     "lint": "esw storybook/**",
     "lint-watch": "esw -w --changed storybook/**",
-    "postinstall":"cd ./ios && pod install && cd .."
+    "postinstall": "cd ./ios && pod install && cd .."
   },
   "precommit": "lint",
   "prettier": {
@@ -22,18 +22,19 @@
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.7.1",
+    "@storybook/react-native": "^5.3.8",
+    "@storybook/addon-actions": "^5.3.8",
+    "@storybook/addon-links": "^5.3.8",
+    "@storybook/addons": "^5.3.8",
+    "@storybook/react-native-server": "^5.3.8",
     "react": "16.9.0",
-    "react-native": "0.61.5"
+    "react-native": "0.61.5",
+    "prop-types": "^15.7.2"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/runtime": "^7.8.3",
     "@react-native-community/eslint-config": "^0.0.6",
-    "@storybook/addon-actions": "^5.3.8",
-    "@storybook/addon-links": "^5.3.8",
-    "@storybook/addons": "^5.3.8",
-    "@storybook/react-native": "^5.3.8",
-    "@storybook/react-native-server": "^5.3.8",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^25.1.0",
