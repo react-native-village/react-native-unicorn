@@ -1,6 +1,7 @@
 // @flow
 import React, { memo } from 'react'
 import { CardBorder, H4, H5, H6, Space } from '..'
+import { W } from '../constants'
 
 type CardContactsT = {
   obj: {
@@ -21,7 +22,7 @@ const CardContacts = memo<CardContactsT>(({ obj }) => {
       <H6 title={web} />
       <Space height={10} />
       <H5 title="phone" />
-      <H4 title={phone} />
+      <H4 title={phone} viewStyle={{ width: W - 50 }} />
     </CardBorder>
   )
 })

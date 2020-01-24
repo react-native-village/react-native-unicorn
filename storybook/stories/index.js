@@ -3,7 +3,6 @@ import React from 'react'
 import { storiesOf } from '@storybook/react-native'
 import { action } from '@storybook/addon-actions'
 import { linkTo } from '@storybook/addon-links'
-
 import {
   Avatar,
   Button,
@@ -16,11 +15,17 @@ import {
   H7,
   CardResume,
   CardCareer,
-  CardCareer2,
   CardInfo,
   CardAbout,
   CardContacts,
-  CardVacancies
+  CardVacancies,
+  Plus,
+  Developer,
+  Dollar,
+  Cost,
+  ProfileInfo,
+  Line,
+  Background
 } from './components'
 import CenterView from './CenterView'
 import Welcome from './Welcome'
@@ -63,5 +68,14 @@ storiesOf('Cards', module)
   .add('CardContacts', () => <CardContacts obj={cardcontacts} />)
   .add('CardVacancies', () => <CardVacancies obj={cardvacancies} />)
   .add('CardAbout', () => <CardAbout title={cardabout} />)
-  .add('CardAbout2', () => <CardCareer2 obj={cardcareer} />)
   .add('CardInfo', () => <CardInfo obj={cardinfo} />)
+
+storiesOf('Items', module)
+  .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
+  .add('Plus', () => <Plus />)
+  .add('Developer', () => <Developer title="Reactnative Dmitriy" />)
+  .add('Dollar', () => <Dollar />)
+  .add('Cost', () => <Cost title={5000} />)
+  .add('ProfileInfo', () => <ProfileInfo location="Russia, Moscow" age={39} />)
+  .add('Line', () => <Line />)
+  .add('Background', () => <Background />)
