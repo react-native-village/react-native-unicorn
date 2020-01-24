@@ -6,13 +6,16 @@ import { H4, Avatar, Rate } from '..'
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     justifyContent: 'center',
     flexDirection: 'row'
   },
   h4: {
+    top: 8,
     marginLeft: 15,
     marginRight: 15
+  },
+  rate: {
+    top: 5
   }
 })
 
@@ -24,12 +27,12 @@ type ButtonDeveloperSubT = {
 }
 
 const ButtonDeveloperSub = memo<ButtonDeveloperSubT>(({ title, viewStyle, onPress }) => {
-  const { container, h4 } = styles
+  const { container, h4, rate } = styles
   return (
     <TouchableOpacity onPress={onPress} style={[container, viewStyle]}>
       <Avatar uri="https://pbs.twimg.com/profile_images/1054434556156162054/1H_7AxP0.jpg" size="small" />
       <H4 title={title} textStyle={h4} />
-      <Rate title="2/433" />
+      <Rate title="2/433" viewStyle={rate} />
     </TouchableOpacity>
   )
 })

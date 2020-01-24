@@ -6,7 +6,6 @@ import { WHITE, BLUE } from '../constants'
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     justifyContent: 'center',
     borderWidth: 1,
     borderRadius: 17,
@@ -16,6 +15,7 @@ const styles = StyleSheet.create({
     marginLeft: 5
   },
   h7: {
+    top: 1,
     alignSelf: 'center',
     fontFamily: '3270Narrow',
     padding: 15,

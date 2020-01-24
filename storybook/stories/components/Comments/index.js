@@ -16,7 +16,8 @@ const styles = StyleSheet.create({
     marginBottom: 4
   },
   h4: {
-    paddingLeft: 6
+    top: 2,
+    left: 2
   }
 })
 

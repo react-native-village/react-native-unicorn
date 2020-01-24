@@ -6,14 +6,14 @@ import { H5 } from '..'
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     width: 120,
     justifyContent: 'center',
     flexDirection: 'row'
   },
   emoji: {
     fontSize: 18,
-    marginBottom: 4
+    bottom: 6,
+    left: 5
   }
 })
 

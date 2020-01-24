@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { storiesOf } from '@storybook/react-native'
-import { action } from '@storybook/addon-actions'
+//import { action } from '@storybook/addon-actions'
 import { linkTo } from '@storybook/addon-links'
 import {
   Avatar,
@@ -25,11 +25,19 @@ import {
   Cost,
   ProfileInfo,
   Line,
-  Background
+  Background,
+  Space,
+  ButtonDeveloperSub,
+  ButtonStatusIssue,
+  ButtonMarkDecision,
+  IconCircle,
+  Comments,
+  Star
 } from './components'
 import CenterView from './CenterView'
 import Welcome from './Welcome'
 import { cardinfo, cardabout, cardcontacts, cardvacancies, cardcareer, cardresume } from './data'
+import { BLUE, PINK } from './components/constants'
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />)
 
@@ -57,9 +65,36 @@ storiesOf('Text', module)
 
 storiesOf('Button', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('with text', () => <Button title="Hello world" onPress={action('clicked-emoji')} />)
-  .add('with text', () => <Button title="Hello world" onPress={action('clicked-emoji')} />)
-  .add('with some emoji', () => <Button title="Hello" onPress={action('clicked-emoji')} />)
+  .add('Button', () => (
+    <>
+      <Button title="Done" textStyle={{ fontSize: 30 }} />
+      <Space height={10} />
+      <Button title="Cancel" textStyle={{ fontSize: 30 }} color={PINK} />
+    </>
+  ))
+  .add('ButtonMarkDecision', () => <ButtonMarkDecision />)
+  .add('Comments', () => <Comments title={3} />)
+  .add('IconCircle', () => (
+    <>
+      <IconCircle name=":thought_balloon:" />
+      <Space height={10} />
+      <IconCircle name=":telephone_receiver:" />
+      <Space height={10} />
+      <IconCircle name=":loud_sound:" />
+      <Space height={10} />
+      <IconCircle name=":thought_balloon:" />
+    </>
+  ))
+  .add('ButtonDeveloperSub', () => <ButtonDeveloperSub title="Ivan Ivanov" color={BLUE} />)
+  .add('ButtonStatusIssue Closed', () => <ButtonStatusIssue title={`Closed ${34}`} color={BLUE} />)
+  .add('ButtonStatusIssue Open', () => <ButtonStatusIssue title={`Open ${34}`} color={PINK} />)
+  .add('Star', () => (
+    <>
+      <Star />
+      <Space height={20} />
+      <Star star />
+    </>
+  ))
 
 storiesOf('Cards', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
