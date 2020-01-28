@@ -28,11 +28,16 @@
     "@storybook/addons": "^5.3.8",
     "@storybook/react-native": "^5.3.8",
     "@storybook/react-native-server": "^5.3.8",
+    "lodash": "^4.17.15",
     "prop-types": "^15.7.2",
     "react": "16.9.0",
+    "react-favicon": "^0.0.17",
     "react-native": "0.61.5",
     "react-native-emoji": "^1.8.0",
-    "react-native-vector-icons": "^6.6.0"
+    "react-native-floating-label": "^0.2.3",
+    "react-native-vector-icons": "^6.6.0",
+    "rn-fetch-blob": "^0.12.0",
+    "tcomb-form-native": "^0.6.20"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",

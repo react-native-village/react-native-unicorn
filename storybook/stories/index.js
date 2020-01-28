@@ -27,12 +27,14 @@ import {
   Line,
   Background,
   Space,
+  SocialIcons,
   ButtonDeveloperSub,
   ButtonStatusIssue,
   ButtonMarkDecision,
   IconCircle,
   Comments,
-  Star
+  Star,
+  Input
 } from './components'
 import CenterView from './CenterView'
 import Welcome from './Welcome'
@@ -63,7 +65,7 @@ storiesOf('Text', module)
   .add('H6', () => <H6 title="H6" />)
   .add('H7', () => <H7 title="H7" />)
 
-storiesOf('Button', module)
+storiesOf('Buttons', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('Button', () => (
     <>
@@ -86,8 +88,13 @@ storiesOf('Button', module)
     </>
   ))
   .add('ButtonDeveloperSub', () => <ButtonDeveloperSub title="Ivan Ivanov" color={BLUE} />)
-  .add('ButtonStatusIssue Closed', () => <ButtonStatusIssue title={`Closed ${34}`} color={BLUE} />)
-  .add('ButtonStatusIssue Open', () => <ButtonStatusIssue title={`Open ${34}`} color={PINK} />)
+  .add('ButtonStatusIssue', () => (
+    <>
+      <ButtonStatusIssue title={`Closed ${34}`} color={BLUE} />
+      <Space height={20} />
+      <ButtonStatusIssue title={`Open ${34}`} color={PINK} />
+    </>
+  ))
   .add('Star', () => (
     <>
       <Star />
@@ -95,6 +102,7 @@ storiesOf('Button', module)
       <Star star />
     </>
   ))
+  .add('SocialIcons', () => <SocialIcons />)
 
 storiesOf('Cards', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
@@ -114,3 +122,7 @@ storiesOf('Items', module)
   .add('ProfileInfo', () => <ProfileInfo location="Russia, Moscow" age={39} />)
   .add('Line', () => <Line />)
   .add('Background', () => <Background />)
+
+storiesOf('Inputs', module)
+  .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
+  .add('Input', () => <Input />)
