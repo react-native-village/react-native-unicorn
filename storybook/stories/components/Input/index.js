@@ -3,38 +3,29 @@ import React, { memo, useRef } from 'react'
 import { StyleSheet, View } from 'react-native'
 import t from 'tcomb-form-native'
 import { search, options } from '../Form'
-import { W, BLUE, PINK, WHITE } from '../constants'
+import { W, BLUE, PINK } from '../constants'
 
 const Form = t.form.Form // eslint-disable-line
 
-const container = {
-  borderWidth: 1,
-  borderRadius: 15,
-  height: 50,
-  borderColor: WHITE
-}
-
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    width: W,
-    justifyContent: 'center',
-    paddingHorizontal: 20,
-    backgroundColor: 'transparent'
-  },
   containerBlue: {
-    ...container,
-    borderColor: BLUE,
-    height: 50,
+    borderBottomColor: BLUE,
+    borderBottomWidth: 2,
     flexDirection: 'row'
   },
   containerPink: {
-    ...container,
-    borderColor: PINK,
+    borderBottomColor: PINK,
+    borderBottomWidth: 2,
     width: W - 40,
-    height: 50,
-    bottom: 0,
-    marginTop: 1
+    marginTop: 2
+  },
+  input: {
+    height: 100,
+    color: PINK,
+    top: 28,
+    fontFamily: '3270Narrow',
+    fontSize: 17,
+    justifyContent: 'center'
   }
 })
 
@@ -49,11 +40,9 @@ const Input = memo<InputT>(({ onChange, value }) => {
   const { containerBlue, containerPink } = styles
 
   return (
-    <View style={styles.container}>
-      <View style={containerBlue}>
-        <View style={containerPink}>
-          <Form ref={ref} type={search} options={options} onChange={onChange} value={value} />
-        </View>
+    <View style={containerBlue}>
+      <View style={containerPink}>
+        <Form ref={ref} type={search} options={options} onChange={onChange} value={value} />
       </View>
     </View>
   )

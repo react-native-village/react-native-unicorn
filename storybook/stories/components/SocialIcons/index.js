@@ -4,6 +4,7 @@ import React, { memo, useState, useEffect } from 'react'
 import { Text, Alert, Modal, StyleSheet, Image, TouchableOpacity, Platform, View, FlatList } from 'react-native'
 import type { ImageStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet'
 import RNFetchBlob from 'rn-fetch-blob'
+import { Input } from '..'
 
 const styles = StyleSheet.create({
   container: {
@@ -106,7 +107,7 @@ const SocialIcons = memo<SocialIconsT>(({ onPress }) => {
       >
         <View style={{ marginTop: 22 }}>
           <View>
-            <Text>Hello World!</Text>
+            <Input />
 
             <TouchableOpacity onPress={() => setModal(!modal)}>
               <Text>Hide Modal</Text>

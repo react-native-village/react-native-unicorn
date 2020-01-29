@@ -4,7 +4,6 @@ import {
   W,
   LABEL_COLOR,
   PINK,
-  WHITE,
   INPUT_COLOR,
   ERROR_COLOR,
   BORDER_COLOR,
@@ -62,8 +61,6 @@ export const stylesheet = {
   ...Form.stylesheet,
   controlLabel: {
     normal: {
-      marginLeft: 18,
-      bottom: 26,
       color: LABEL_COLOR,
       fontFamily: '3270Narrow',
       fontSize: FONT_SIZE,
@@ -80,16 +77,11 @@ export const stylesheet = {
   },
   textbox: {
     normal: {
-      height: 50,
+      height: 25,
       width: W - 40,
-      bottom: 18,
       fontFamily: '3270Narrow',
       fontSize: FONT_SIZE,
-      color: PINK,
-      paddingLeft: 18,
-      borderRadius: 15,
-      borderColor: WHITE,
-      borderWidth: 0.5
+      color: PINK
     },
     // the style applied when a validation error occours
     error: {
@@ -109,7 +101,6 @@ export const stylesheet = {
     notEditable: {
       height: 50,
       width: W - 40,
-      bottom: 24,
       fontFamily: '3270Narrow',
       fontSize: FONT_SIZE,
       borderRadius: 15,
