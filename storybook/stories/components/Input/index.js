@@ -1,15 +1,11 @@
 // @flow
-import React, { memo, useRef, useState } from 'react'
+import React, { memo, useRef } from 'react'
 import { StyleSheet, View } from 'react-native'
 import t from 'tcomb-form-native'
 import { search, options } from '../Form'
 import { W, BLUE, PINK, WHITE } from '../constants'
 
 const Form = t.form.Form // eslint-disable-line
-
-type InputT = {
-  onPress: Function
-}
 
 const container = {
   borderWidth: 1,
@@ -37,16 +33,17 @@ const styles = StyleSheet.create({
     borderColor: PINK,
     width: W - 40,
     height: 50,
-    bottom: 3,
+    bottom: 0,
     marginTop: 1
   }
 })
 
-const Input = memo<InputT>(() => {
-  const [value, setValue] = useState({
-    value: ''
-  })
+type InputT = {
+  value: string,
+  onChange: Function
+}
 
+const Input = memo<InputT>(({ onChange, value }) => {
   const ref = useRef('')
 
   const { containerBlue, containerPink } = styles
@@ -55,7 +52,7 @@ const Input = memo<InputT>(() => {
     <View style={styles.container}>
       <View style={containerBlue}>
         <View style={containerPink}>
-          <Form ref={ref} type={search} options={options} onChange={text => setValue(text)} value={value} />
+          <Form ref={ref} type={search} options={options} onChange={onChange} value={value} />
         </View>
       </View>
     </View>
