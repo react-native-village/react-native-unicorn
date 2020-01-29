@@ -186,57 +186,6 @@ export const options = {
       keyboardType: 'numeric',
       error: 'Please enter rate',
       factory: FloatingLabel
-    },
-    description: {
-      stylesheet: {
-        ...Form.stylesheet,
-        controlLabel: {
-          normal: {
-            color: LABEL_COLOR,
-            fontFamily: '3270Narrow',
-            fontSize: FONT_SIZE,
-            marginLeft: 5,
-            marginBottom: 7,
-            justifyContent: 'center',
-            fontWeight: FONT_WEIGHT
-          },
-          error: {
-            color: ERROR_COLOR,
-            fontFamily: '3270Narrow',
-            fontSize: FONT_SIZE,
-            marginLeft: 5,
-            marginRight: 7,
-            fontWeight: FONT_WEIGHT
-          }
-        },
-        textbox: {
-          normal: {
-            height: 300,
-            color: INPUT_COLOR,
-            fontFamily: '3270Narrow',
-            fontSize: FONT_SIZE,
-            paddingHorizontal: 12,
-            borderRadius: 4,
-            textAlignVertical: 'top',
-            borderColor: BORDER_COLOR,
-            borderWidth: 0.5,
-            paddingTop: 13,
-            paddingBottom: 0,
-            marginLeft: 5,
-            marginRight: 5
-          },
-          error: {
-            ...Form.stylesheet.textbox.error,
-            height: 150
-          }
-        }
-      },
-      placeholder: 'Description',
-      secureTextEntry: false,
-      multiline: true,
-      autoCapitalize: 'none',
-      error: 'Please enter rate',
-      factory: FloatingLabel
     }
   }
 }

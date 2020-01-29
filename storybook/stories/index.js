@@ -34,7 +34,8 @@ import {
   IconCircle,
   Comments,
   Star,
-  Input
+  Input,
+  InputBig
 } from './components'
 import CenterView from './CenterView'
 import Welcome from './Welcome'
@@ -126,3 +127,4 @@ storiesOf('Items', module)
 storiesOf('Inputs', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('Input', () => <Input />)
+  .add('InputBig', () => <InputBig />)

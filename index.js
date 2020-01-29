@@ -10,6 +10,7 @@ YellowBox.ignoreWarnings([
   'Warning: componentWillReceiveProps',
   'RCTRootView cancelTouches',
   'not authenticated',
+  'Story with id',
   'Sending `onAnimatedValueUpdate`'
 ])
 
