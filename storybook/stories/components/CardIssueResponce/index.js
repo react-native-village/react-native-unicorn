@@ -3,19 +3,16 @@ import React, { memo } from 'react'
 import { View, StyleSheet } from 'react-native'
 import { CardBorder, Line, ButtonMarkDecision, H4, ButtonDeveloperSub, Comments, Space } from '..'
 
-const main = {
-  width: '100%'
-}
 const styles = StyleSheet.create({
   row: {
-    ...main,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   },
   align: {
-    ...main,
     alignItems: 'flex-end'
   }
 })
+
 type Props = {
   obj: {
     description: string,
