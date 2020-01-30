@@ -1,29 +1,36 @@
 // @flow
-/* eslint-disable */
-import React, { memo, useState, useEffect } from 'react'
-import { Text, Alert, Modal, StyleSheet, Image, TouchableOpacity, Platform, View, FlatList } from 'react-native'
-import type { ImageStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet'
-import RNFetchBlob from 'rn-fetch-blob'
-import { Input } from '..'
+import React, { memo, useState } from 'react'
+import { Modal, StyleSheet, View, Image, TouchableOpacity, FlatList } from 'react-native'
+import Icon from 'react-native-vector-icons/FontAwesome'
+import { BLUE } from '../constants'
+import { links } from '../Form'
+import { Input, Button } from '..'
 
 const styles = StyleSheet.create({
   container: {
-    position: 'absolute',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  sub: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    width: 30,
-    height: 30,
-    borderRadius: 30 / 2,
-    backgroundColor: '#fff'
+    backgroundColor: '#121212'
   },
   starStyle: {
-    width: 32,
-    height: 32
+    width: 25,
+    height: 25
   },
-  faviconStyle: {
-    position: 'absolute',
-    width: 15,
-    height: 15
+  iconStyle: {
+    padding: 8
+  },
+  button: {
+    marginTop: 40
+  },
+  plus: {
+    paddingLeft: 7,
+    paddingTop: 8
   }
 })
 
@@ -35,90 +42,65 @@ type SocialIconsT = {
 const data = [
   {
     id: '0',
-    uri: 'https://github.com'
+    uri: 'github'
   },
   {
     id: '1',
-    uri: 'https://yandex.ru'
+    uri: 'youtube'
   },
   {
     id: '2',
-    uri: 'https://mail.ru'
+    uri: 'instagram'
+  },
+  {
+    id: '3',
+    uri: 'facebook'
   }
 ]
 
 const SocialIcons = memo<SocialIconsT>(({ onPress }) => {
-  const [favicons, setFavicons] = useState(data)
+  const [value, setValue] = useState('')
+  const [modal, setModal] = useState(false)
 
-  const getFavicon = async (uri: string) => {
-    let arr = []
-    try {
-      const respone = await RNFetchBlob.config({ fileCache: true }).fetch(
-        'GET',
-        `https://s2.googleusercontent.com/s2/favicons?domain=${uri}`
-      )
-      const path = respone.path()
-      console.log('path', path)
-      arr.push(path)
-    } catch (e) {
-      console.error(e) // eslint-disable-line
-    }
-    console.log('arr', arr)
-  }
-
-  const { container, starStyle, faviconStyle } = styles
+  const { container, sub, starStyle, iconStyle, button, plus } = styles
 
   const renderItem = ({ item: { uri } }) => {
     return (
-      <TouchableOpacity onPress={onPress}>
-        <View style={container}>
-          <Image style={faviconStyle} source={{ uri: Platform.OS === 'android' ? 'file://' + '' : '' + '' }} />
-        </View>
+      <TouchableOpacity onPress={onPress} style={iconStyle}>
+        <Icon name={uri} size={25} color={BLUE} />
       </TouchableOpacity>
     )
   }
 
   const _keyExtractor = obj => obj.id.toString()
 
-  const [modal, setModal] = useState(false)
-  const _onPress = () => setModal(true)
+  const _onPress = async () => {
+    setModal(!modal)
+  }
 
   return (
-    <>
+    <View style={container}>
       <FlatList
+        horizontal
         scrollEventThrottle={16}
         data={data}
         renderItem={renderItem}
         keyExtractor={_keyExtractor}
         onEndReachedThreshold={0.5}
         ListFooterComponent={
-          <TouchableOpacity onPress={_onPress}>
+          <TouchableOpacity onPress={() => setModal(true)} style={plus}>
             <Image style={starStyle} source={require('./plus.png')} />
           </TouchableOpacity>
         }
       />
-      <Modal
-        animationType="slide"
-        transparent={false}
-        visible={modal}
-        onRequestClose={() => {
-          Alert.alert('Modal has been closed.')
-        }}
-      >
-        <View style={{ marginTop: 22 }}>
-          <View>
-            <Input />
-
-            <TouchableOpacity onPress={() => setModal(!modal)}>
-              <Text>Hide Modal</Text>
-            </TouchableOpacity>
-          </View>
+      <Modal animationType="slide" transparent={false} visible={modal}>
+        <View style={sub}>
+          <Input type={links} value={value} onChange={text => setValue(text)} />
+          <Button textStyle={button} onPress={_onPress} title="Done" />
         </View>
       </Modal>
-    </>
+    </View>
   )
 })
 
-//<Image style={faviconStyle} source={{ uri: Platform.OS === 'android' ? 'file://' + uri : '' + uri }} />
-//<Image style={[starStyle, imageStyle]} source={require('./plus.png')} />
 export { SocialIcons }

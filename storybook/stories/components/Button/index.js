@@ -7,7 +7,7 @@ import { BLUE, PINK } from '../constants'
 const styles = StyleSheet.create({
   img: {
     alignSelf: 'center',
-    fontSize: 40,
+    fontSize: 30,
     fontFamily: 'IBM-Logo'
   }
 })

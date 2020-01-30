@@ -41,6 +41,7 @@ import CenterView from './CenterView'
 import Welcome from './Welcome'
 import { cardinfo, cardabout, cardcontacts, cardvacancies, cardcareer, cardresume } from './data'
 import { BLUE, PINK } from './components/constants'
+import { search } from './components/Form'
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />)
 
@@ -126,5 +127,5 @@ storiesOf('Items', module)
 
 storiesOf('Inputs', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('Input', () => <Input />)
+  .add('Input', () => <Input type={search} />)
   .add('InputBig', () => <InputBig />)

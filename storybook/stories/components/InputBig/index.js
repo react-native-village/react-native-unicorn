@@ -7,21 +7,16 @@ import { W, BLUE, PINK, DISABLED_COLOR } from '../constants'
 const Form = t.form.Form // eslint-disable-line
 
 const styles = StyleSheet.create({
-  containerBlue: {
+  container: {
     borderBottomColor: BLUE,
+    width: W - 40,
     borderBottomWidth: 2,
     flexDirection: 'row'
-  },
-  containerPink: {
-    borderBottomColor: PINK,
-    borderBottomWidth: 2,
-    width: W - 40,
-    marginTop: 2
   },
   input: {
     height: 100,
     color: PINK,
-    top: 28,
+    top: 38,
     fontFamily: '3270Narrow',
     fontSize: 17,
     justifyContent: 'center'
@@ -36,21 +31,19 @@ type InputBigT = {
 
 const InputBig = memo<InputBigT>(({ onChange, value, placeholder = 'description' }) => {
   const [height, setHeight] = useState(100)
-  const { containerBlue, containerPink, input } = styles
+  const { container, input } = styles
 
   return (
-    <View style={[containerBlue, { height: height + 50 }]}>
-      <View style={[containerPink, { height: height + 50 }]}>
-        <TextInput
-          value={value}
-          multiline
-          style={[input, { height }]}
-          placeholderTextColor={DISABLED_COLOR}
-          placeholder={placeholder}
-          onChange={onChange}
-          onContentSizeChange={e => setHeight(e.nativeEvent.contentSize.height)}
-        />
-      </View>
+    <View style={[container, { height: height + 50 }]}>
+      <TextInput
+        value={value}
+        multiline
+        style={[input, { height }]}
+        placeholderTextColor={DISABLED_COLOR}
+        placeholder={placeholder}
+        onChange={onChange}
+        onContentSizeChange={e => setHeight(e.nativeEvent.contentSize.height)}
+      />
     </View>
   )
 })
