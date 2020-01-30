@@ -4,6 +4,7 @@ import {
   W,
   LABEL_COLOR,
   PINK,
+  BLUE,
   INPUT_COLOR,
   ERROR_COLOR,
   BORDER_COLOR,
@@ -57,6 +58,13 @@ export const search = t.struct({
   search: t.String
 })
 
+export const links = t.struct({
+  github: t.String,
+  youtube: t.String,
+  instagram: t.String,
+  facebook: t.String
+})
+
 export const stylesheet = {
   ...Form.stylesheet,
   controlLabel: {
@@ -81,7 +89,10 @@ export const stylesheet = {
       width: W - 40,
       fontFamily: '3270Narrow',
       fontSize: FONT_SIZE,
-      color: PINK
+      color: PINK,
+      borderBottomColor: BLUE,
+      borderBottomWidth: 2,
+      marginTop: 2
     },
     // the style applied when a validation error occours
     error: {
@@ -126,8 +137,24 @@ export const options = {
   fields: {
     search: {
       stylesheet,
-      placeholder: 'Search',
+      label: 'search',
       error: 'Please enter search',
+      factory: FloatingLabel
+    },
+    github: {
+      stylesheet,
+      factory: FloatingLabel
+    },
+    facebook: {
+      stylesheet,
+      factory: FloatingLabel
+    },
+    youtube: {
+      stylesheet,
+      factory: FloatingLabel
+    },
+    instagram: {
+      stylesheet,
       factory: FloatingLabel
     },
     email: {
