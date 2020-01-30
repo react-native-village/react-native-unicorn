@@ -35,11 +35,24 @@ import {
   Comments,
   Star,
   Input,
-  InputBig
+  InputBig,
+  CardIssue,
+  CardIssueResponce,
+  CardIssueResponceSub
 } from './components'
 import CenterView from './CenterView'
 import Welcome from './Welcome'
-import { cardinfo, cardabout, cardcontacts, cardvacancies, cardcareer, cardresume } from './data'
+import {
+  cardinfo,
+  cardabout,
+  cardcontacts,
+  cardvacancies,
+  cardcareer,
+  cardresume,
+  cardissue,
+  cardissueresponce,
+  cardissueresponcesub
+} from './data'
 import { BLUE, PINK } from './components/constants'
 import { search } from './components/Form'
 
@@ -114,6 +127,9 @@ storiesOf('Cards', module)
   .add('CardVacancies', () => <CardVacancies obj={cardvacancies} />)
   .add('CardAbout', () => <CardAbout title={cardabout} />)
   .add('CardInfo', () => <CardInfo obj={cardinfo} />)
+  .add('CardIssue', () => <CardIssue obj={cardissue} />)
+  .add('CardIssueResponce', () => <CardIssueResponce obj={cardissueresponce} />)
+  .add('CardIssueResponceSub', () => <CardIssueResponceSub obj={cardissueresponcesub} />)
 
 storiesOf('Items', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
