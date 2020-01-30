@@ -32,7 +32,7 @@ const ButtonDeveloperSub = memo<ButtonDeveloperSubT>(({ title, viewStyle, onPres
     <TouchableOpacity onPress={onPress} style={[container, viewStyle]}>
       <Avatar uri="https://pbs.twimg.com/profile_images/1054434556156162054/1H_7AxP0.jpg" size="small" />
       <H4 title={title} textStyle={h4} />
-      <Rate title="2/433" viewStyle={rate} />
+      <Rate title="2" viewStyle={rate} />
     </TouchableOpacity>
   )
 })

@@ -17,7 +17,7 @@ const CardIssueResponceSub = memo<Props>(({ obj }) => {
       <CardBorder>
         <H4 title={description} />
         <Space height={30} />
-        <ButtonDeveloperSub title={name} />
+        <ButtonDeveloperSub title={name} viewStyle={{ alignSelf: 'flex-start' }} />
       </CardBorder>
     </>
   )

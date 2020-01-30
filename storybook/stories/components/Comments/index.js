@@ -1,6 +1,7 @@
 // @flow
 import React, { memo } from 'react'
 import { StyleSheet, TouchableOpacity, View } from 'react-native'
+import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet'
 import Emoji from 'react-native-emoji'
 import { H4 } from '..'
 
@@ -23,13 +24,14 @@ const styles = StyleSheet.create({
 
 type CommentsT = {
   title: string,
-  onPress: Function
+  onPress: Function,
+  viewStyle: ViewStyleProp
 }
 
-const Comments = memo<CommentsT>(({ title, onPress }) => {
+const Comments = memo<CommentsT>(({ title, onPress, viewStyle }) => {
   const { container, sub, emoji, h4 } = styles
   return (
-    <TouchableOpacity onPress={onPress} style={container}>
+    <TouchableOpacity onPress={onPress} style={[container, viewStyle]}>
       <View style={sub}>
         <Emoji name=":thought_balloon:" style={emoji} />
         <H4 title={title} textStyle={h4} />
