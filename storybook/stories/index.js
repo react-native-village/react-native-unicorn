@@ -142,7 +142,7 @@ storiesOf('Inputs', module)
 storiesOf('Tabs', module)
     .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
     .add('TabCompany', () => <TabCompany paper=":page_facing_up:" plug=":electric_plug:" briefcase=":briefcase:" star=":star:" />) //obj={tabcompany}
-    .add('TabDeveloper', () => <TabDeveloper title="Hello" />)
+    .add('TabDeveloper', () => <TabDeveloper paper=":page_facing_up:" briefcase=":briefcase:" cap=":mortar_board:" star=":star:" />)
 
 storiesOf('Items', module)
     .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
