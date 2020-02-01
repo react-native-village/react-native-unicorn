@@ -38,7 +38,9 @@ import {
   InputBig,
   CardIssue,
   CardIssueResponce,
-  CardIssueResponceSub
+  CardIssueResponceSub,
+  TabCompany,
+  TabDeveloper
 } from './components'
 import CenterView from './CenterView'
 import Welcome from './Welcome'
@@ -140,7 +142,10 @@ storiesOf('Items', module)
   .add('ProfileInfo', () => <ProfileInfo location="Russia, Moscow" age={39} />)
   .add('Line', () => <Line />)
   .add('Background', () => <Background />)
-
+storiesOf('Tabs', module)
+  .addDecorator(getStory=> <CenterView>{getStory}</CenterView>)
+  .add('TabCompany', ()=> <TabCompany title="This is tab company" />)
+  .add('TabDeveloper', ()=> <TabDeveloper title="This is tab developer" />)
 storiesOf('Inputs', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('Input', () => <Input type={search} />)

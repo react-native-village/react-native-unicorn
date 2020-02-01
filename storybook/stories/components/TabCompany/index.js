@@ -4,7 +4,7 @@ import { StyleSheet, View, Text } from 'react-native'
 
 const styles = StyleSheet.create({
     icon:{
-
+        color: '#fff'
     }
 })
 type Props = {
@@ -16,8 +16,8 @@ type Props = {
 const TabCompany = memo<Props>(({ title })=>{
     const { icon } = styles
     return(
-      <View>
-        <Text>{ title }</Text>
+      <View style={icon}>
+        <Text style={icon}>{ title }</Text>
       </View>
     )
 })
