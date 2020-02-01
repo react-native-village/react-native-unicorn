@@ -53,7 +53,8 @@ import {
   cardresume,
   cardissue,
   cardissueresponce,
-  cardissueresponcesub
+  cardissueresponcesub,
+  tabcompany
 } from './data'
 import { BLUE, PINK } from './components/constants'
 import { search } from './components/Form'
@@ -133,20 +134,22 @@ storiesOf('Cards', module)
   .add('CardIssueResponce', () => <CardIssueResponce obj={cardissueresponce} />)
   .add('CardIssueResponceSub', () => <CardIssueResponceSub obj={cardissueresponcesub} />)
 
-storiesOf('Items', module)
-  .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('Plus', () => <Plus />)
-  .add('Developer', () => <Developer title="Reactnative Dmitriy" />)
-  .add('Dollar', () => <Dollar />)
-  .add('Cost', () => <Cost title={5000} />)
-  .add('ProfileInfo', () => <ProfileInfo location="Russia, Moscow" age={39} />)
-  .add('Line', () => <Line />)
-  .add('Background', () => <Background />)
-storiesOf('Tabs', module)
-  .addDecorator(getStory=> <CenterView>{getStory}</CenterView>)
-  .add('TabCompany', ()=> <TabCompany title="This is tab company" />)
-  .add('TabDeveloper', ()=> <TabDeveloper title="This is tab developer" />)
 storiesOf('Inputs', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
   .add('Input', () => <Input type={search} />)
   .add('InputBig', () => <InputBig />)
+
+storiesOf('Tabs', module)
+    .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
+    .add('TabCompany', () => <TabCompany paper=":page_facing_up:" plug=":electric_plug:" briefcase=":briefcase:" star=":star:" />) //obj={tabcompany}
+    .add('TabDeveloper', () => <TabDeveloper title="Hello" />)
+
+storiesOf('Items', module)
+    .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
+    .add('Plus', () => <Plus />)
+    .add('Developer', () => <Developer title="Reactnative Dmitriy" />)
+    .add('Dollar', () => <Dollar />)
+    .add('Cost', () => <Cost title={5000} />)
+    .add('ProfileInfo', () => <ProfileInfo location="Russia, Moscow" age={39} />)
+    .add('Line', () => <Line />)
+    .add('Background', () => <Background />)
