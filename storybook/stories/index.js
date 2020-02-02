@@ -53,8 +53,7 @@ import {
   cardresume,
   cardissue,
   cardissueresponce,
-  cardissueresponcesub,
-  tabcompany
+  cardissueresponcesub
 } from './data'
 import { BLUE, PINK } from './components/constants'
 import { search } from './components/Form'
@@ -141,8 +140,8 @@ storiesOf('Inputs', module)
 
 storiesOf('Tabs', module)
     .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-    .add('TabCompany', () => <TabCompany paper=":page_facing_up:" plug=":electric_plug:" briefcase=":briefcase:" star=":star:" />) //obj={tabcompany}
-    .add('TabDeveloper', () => <TabDeveloper paper=":page_facing_up:" briefcase=":briefcase:" cap=":mortar_board:" star=":star:" />)
+    .add('TabCompany', () => <TabCompany />)
+    .add('TabDeveloper', () => <TabDeveloper />)
 
 storiesOf('Items', module)
     .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)

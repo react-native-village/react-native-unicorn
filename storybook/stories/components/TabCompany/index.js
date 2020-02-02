@@ -75,7 +75,6 @@ const TabCompany = (()=>{
         const defaultObject = numbers.reduce((acc, el) => ({ ...acc, [el]: false }), {})
         setValue({ ...defaultObject, [numbers[number - 1]]: true })
     }
-
     const { container } = styles
     return(
       <CardBorder>
