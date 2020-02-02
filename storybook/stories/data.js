@@ -67,12 +67,7 @@ const cardcareer = {
   link: 'Sertifikat'
 }
 
-const tabcompany = {
-  page: ":page_facing_up:",
-  plug: ":electric_plug:",
-  briefcase: ":briefcase:",
-  star: ":star:"
-}
+
 
 export {
   cardinfo,
@@ -84,6 +79,5 @@ export {
   user,
   cardissue,
   cardissueresponce,
-  cardissueresponcesub,
-  tabcompany
+  cardissueresponcesub
 }
