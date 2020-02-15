@@ -40,7 +40,8 @@ import {
   CardIssueResponce,
   CardIssueResponceSub,
   TabCompany,
-  TabDeveloper
+  TabDeveloper,
+  Tabs
 } from './components'
 import CenterView from './CenterView'
 import Welcome from './Welcome'
@@ -142,6 +143,7 @@ storiesOf('Tabs', module)
     .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
     .add('TabCompany', () => <TabCompany />)
     .add('TabDeveloper', () => <TabDeveloper />)
+    .add('Tabs', () => <Tabs />)
 
 storiesOf('Items', module)
     .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
