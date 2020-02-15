@@ -67,8 +67,6 @@ const cardcareer = {
   link: 'Sertifikat'
 }
 
-
-
 export {
   cardinfo,
   cardabout,

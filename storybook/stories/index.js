@@ -41,7 +41,8 @@ import {
   CardIssueResponceSub,
   TabCompany,
   TabDeveloper,
-  Tabs
+  Tabs,
+  HeaderMaster
 } from './components'
 import CenterView from './CenterView'
 import Welcome from './Welcome'
@@ -54,7 +55,8 @@ import {
   cardresume,
   cardissue,
   cardissueresponce,
-  cardissueresponcesub
+  cardissueresponcesub,
+  user
 } from './data'
 import { BLUE, PINK } from './components/constants'
 import { search } from './components/Form'
@@ -151,6 +153,7 @@ storiesOf('Items', module)
     .add('Developer', () => <Developer title="Reactnative Dmitriy" />)
     .add('Dollar', () => <Dollar />)
     .add('Cost', () => <Cost title={5000} />)
+    .add('HeaderMaster', ()=>   <HeaderMaster user={user} />)
     .add('ProfileInfo', () => <ProfileInfo location="Russia, Moscow" age={39} />)
     .add('Line', () => <Line />)
     .add('Background', () => <Background />)
