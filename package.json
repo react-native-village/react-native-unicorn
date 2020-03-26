@@ -1,6 +1,6 @@
 {
   "name": "react-native-unicorn-uikit",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "private": false,
   "author": "@ghashtag",
   "license": "MIT",
@@ -11,8 +11,7 @@
     "ios": "react-native run-ios --simulator='iPhone SE'",
     "android": "react-native run-android",
     "lint": "esw src/**",
-    "lint-watch": "esw -w --changed src/**",
-    "postinstall": "cd ./ios && pod install && cd .."
+    "lint-watch": "esw -w --changed src/**"
   },
   "precommit": "lint",
   "prettier": {

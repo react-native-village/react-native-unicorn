@@ -1,3 +1,4 @@
+import ThemeProvider from './src/ThemeProvider'
 import {
   Avatar,
   Loading,
@@ -87,5 +88,6 @@ export {
   ButtonText,
   Input,
   TabDeveloper,
-  TabCompany
+  TabCompany,
+  ThemeProvider
 }
