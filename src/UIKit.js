@@ -16,6 +16,7 @@ import {
   H6,
   H7,
   H8,
+  Body,
   Space,
   Developer,
   CardIssueResponceSub,
@@ -108,6 +109,8 @@ const UIKit = () => {
           <H7 title="H7" />
           <Space height={5} />
           <H8 title="H8" />
+          <Space height={5} />
+          <Body title="body" />
           <Space height={90} />
         </View>
 

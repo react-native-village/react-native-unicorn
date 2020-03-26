@@ -1,9 +1,10 @@
 // @flow
 import React, { memo } from 'react'
-import { Platform, StyleSheet, Text } from 'react-native'
+import { Platform, StyleSheet } from 'react-native'
 import type { TextStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet'
 import { ifIphoneX } from 'react-native-iphone-x-helper'
 import { useTheme } from '@react-navigation/native'
+import { CustomFontsProvider, Text } from 'react-native-custom-fonts'
 
 const styles = StyleSheet.create({
   h: {
@@ -29,17 +30,27 @@ type BodyT = {
 const Body = memo<BodyT>(({ title, textStyle, numberOfLines, ellipsizeMode }) => {
   const { h } = styles
   const {
-    body: { fontFamily, fontSize, color },
+    body: { fontFamily, fontSize, color, uri },
     colors: { secondary }
   } = useTheme()
+  const fontFaces = [
+    {
+      fontFamily: fontFamily || 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/KLMN_Flash_Pix.ttf',
+      uri
+    }
+  ]
+  const size = Platform.OS === 'ios' ? 12 : 12
+  const flattenedStyle = StyleSheet.flatten([
+    h,
+    textStyle,
+    { fontFamily, fontSize: fontSize || size, color, textShadowColor: secondary }
+  ])
   return (
-    <Text
-      style={[h, textStyle, { fontFamily, color, fontSize, textShadowColor: secondary }]}
-      numberOfLines={numberOfLines}
-      ellipsizeMode={ellipsizeMode}
-    >
-      {title}
-    </Text>
+    <CustomFontsProvider fontFaces={fontFaces}>
+      <Text style={flattenedStyle} numberOfLines={numberOfLines} ellipsizeMode={ellipsizeMode}>
+        {title}
+      </Text>
+    </CustomFontsProvider>
   )
 })
 

@@ -10689,6 +10689,11 @@ react-native-appearance@^0.3.3:
     invariant "^2.2.4"
     use-subscription "^1.0.0"
 
+react-native-custom-fonts@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-native-custom-fonts/-/react-native-custom-fonts-1.0.5.tgz#96032a7d9bd33342a02463cc2899d6a23e5d24a6"
+  integrity sha512-aPDM9OFcJgzC1GmRl2qR4Y+3AhIOohib+E4omExu3XeSqew1qKmFwjsyobIamun9ef83UPAcGn06ECv4FGR9vA==
+
 react-native-emoji@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/react-native-emoji/-/react-native-emoji-1.8.0.tgz#9fe5d97dbb84b102c9b1a68eb3f8e1bf4c1f6173"

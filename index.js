@@ -8,6 +8,7 @@ import { name as appName } from './app.json'
 
 YellowBox.ignoreWarnings([
   'Warning: componentWillReceiveProps',
+  'Warning: componentWillUpdate',
   'RCTRootView cancelTouches',
   'not authenticated',
   'Story with id',

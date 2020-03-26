@@ -1,8 +1,9 @@
 // @flow
 import React, { memo } from 'react'
-import { Text } from 'react-native'
+import { Platform, StyleSheet } from 'react-native'
 import { useTheme } from '@react-navigation/native'
 import type { TextStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet'
+import { CustomFontsProvider, Text } from 'react-native-custom-fonts'
 
 type H0T = {
   title: string,
@@ -12,10 +13,26 @@ type H0T = {
 const H0 = memo<H0T>(({ title, textStyle }) => {
   const {
     dark,
-    h0: { fontFamily, fontSize },
+    h0: { fontSize, fontFamily, uri },
     colors: { primary, secondary }
   } = useTheme()
-  return <Text style={[textStyle, { color: dark ? primary : secondary, fontFamily, fontSize }]}>{title}</Text>
+  const size = Platform.OS === 'ios' ? 40 : 40
+  const flattenedStyle = StyleSheet.flatten([
+    textStyle,
+    { color: dark ? primary : secondary, fontSize: fontSize || size }
+  ])
+  const fontFaces = [
+    {
+      fontFamily,
+      uri: uri || 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/etna-free-font.otf'
+    }
+  ]
+
+  return (
+    <CustomFontsProvider fontFaces={fontFaces}>
+      <Text style={flattenedStyle}>{title}</Text>
+    </CustomFontsProvider>
+  )
 })
 
 export { H0 }

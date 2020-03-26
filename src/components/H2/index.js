@@ -1,8 +1,9 @@
 // @flow
 import React, { memo } from 'react'
-import { StyleSheet, Text } from 'react-native'
+import { Platform, StyleSheet } from 'react-native'
 import type { TextStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet'
 import { useTheme } from '@react-navigation/native'
+import { CustomFontsProvider, Text } from 'react-native-custom-fonts'
 
 const styles = StyleSheet.create({
   h: {
@@ -19,10 +20,26 @@ type H2T = {
 const H2 = memo<H2T>(({ title, textStyle }) => {
   const { h } = styles
   const {
-    h2: { fontFamily, fontSize, color },
+    h2: { fontFamily, fontSize, color, uri },
     colors: { secondary }
   } = useTheme()
-  return <Text style={[h, textStyle, { fontFamily, fontSize, color, textShadowColor: secondary }]}>{title}</Text>
+  const fontFaces = [
+    {
+      fontFamily,
+      uri: uri || 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/TheDolbak-Brush.ttf'
+    }
+  ]
+  const size = Platform.OS === 'ios' ? 25 : 30
+  const flattenedStyle = StyleSheet.flatten([
+    h,
+    textStyle,
+    { fontFamily, fontSize: fontSize || size, color, textShadowColor: secondary }
+  ])
+  return (
+    <CustomFontsProvider fontFaces={fontFaces}>
+      <Text style={flattenedStyle}>{title}</Text>
+    </CustomFontsProvider>
+  )
 })
 
 export { H2 }

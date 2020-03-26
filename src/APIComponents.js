@@ -7,22 +7,22 @@ const mainColor = {
 
 const h0 = {
   fontFamily: Platform.OS === 'ios' ? 'Etna' : 'etna-free-font',
-  fontSize: 40
+  uri: 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/etna-free-font.otf'
 }
 
 const h1 = {
   fontFamily: Platform.OS === 'ios' ? 'KLMN-Flash-Pix' : 'KLMN_Flash_Pix',
-  fontSize: Platform.OS === 'ios' ? 15 : 20
+  uri: 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/KLMN_Flash_Pix.ttf'
 }
 
 const h2 = {
   fontFamily: Platform.OS === 'ios' ? 'The Dolbak' : 'TheDolbak-Brush',
-  fontSize: Platform.OS === 'ios' ? 25 : 30
+  uri: 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/TheDolbak-Brush.ttf'
 }
 
 const h3 = {
   fontFamily: Platform.OS === 'ios' ? 'KLMN-Flash-Pix' : 'KLMN_Flash_Pix',
-  fontSize: Platform.OS === 'ios' ? 15 : 15
+  uri: 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/KLMN_Flash_Pix.ttf'
 }
 
 const h4 = {
@@ -31,28 +31,27 @@ const h4 = {
 }
 
 const h5 = {
-  fontFamily: 'Avenir Next',
-  fontSize: 23
+  fontFamily: 'Avenir Next'
 }
 
 const h6 = {
   fontFamily: Platform.OS === 'ios' ? 'KLMN-Flash-Pix' : 'KLMN_Flash_Pix',
-  fontSize: 13
+  uri: 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/KLMN_Flash_Pix.ttf'
 }
 
 const h7 = {
   fontFamily: Platform.OS === 'ios' ? 'KLMN-Flash-Pix' : 'KLMN_Flash_Pix',
-  fontSize: 12
+  uri: 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/KLMN_Flash_Pix.ttf'
 }
 
 const h8 = {
   fontFamily: '3270Narrow',
-  fontSize: 16
+  uri: 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/3270Narrow.ttf'
 }
 
 const body = {
   fontFamily: Platform.OS === 'ios' ? 'KLMN-Flash-Pix' : 'KLMN_Flash_Pix',
-  fontSize: 12
+  uri: 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/KLMN_Flash_Pix.ttf'
 }
 
 const DarkTheme = {

@@ -37,6 +37,7 @@
     "react-favicon": "^0.0.17",
     "react-native": "0.61.5",
     "react-native-appearance": "^0.3.3",
+    "react-native-custom-fonts": "^1.0.5",
     "react-native-emoji": "^1.8.0",
     "react-native-floating-label": "^0.2.3",
     "react-native-iphone-x-helper": "^1.2.1",
