@@ -7,7 +7,7 @@ const mainColor = {
 
 const h0 = {
   fontFamily: Platform.OS === 'ios' ? 'Etna' : 'etna-free-font',
-  uri: 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/etna-free-font.otf'
+  uri: 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/etna-free-font.ttf'
 }
 
 const h1 = {

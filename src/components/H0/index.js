@@ -19,12 +19,12 @@ const H0 = memo<H0T>(({ title, textStyle }) => {
   const size = Platform.OS === 'ios' ? 40 : 40
   const flattenedStyle = StyleSheet.flatten([
     textStyle,
-    { color: dark ? primary : secondary, fontSize: fontSize || size }
+    { color: dark ? primary : secondary, fontSize: fontSize || size, fontFamily }
   ])
   const fontFaces = [
     {
       fontFamily,
-      uri: uri || 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/etna-free-font.otf'
+      uri: uri || 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/etna-free-font.ttf'
     }
   ]
 
