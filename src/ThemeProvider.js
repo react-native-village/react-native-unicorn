@@ -8,16 +8,14 @@ import { NavigationContainer } from '@react-navigation/native'
 
 type ThemeProviderT = {
   children?: Node,
-  scheme: boolean,
-  DarkTheme: {},
-  LightTheme: {}
+  theme: {}
 }
 
-const ThemeProvider = memo<ThemeProviderT>(({ scheme, children, DarkTheme, LightTheme }) => {
+const ThemeProvider = memo<ThemeProviderT>(({ children, theme }) => {
   return (
     <>
       <AppearanceProvider>
-        <NavigationContainer theme={scheme ? DarkTheme : LightTheme}>{children}</NavigationContainer>
+        <NavigationContainer theme={theme}>{children}</NavigationContainer>
       </AppearanceProvider>
     </>
   )
