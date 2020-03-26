@@ -1,7 +1,12 @@
 {
-  "name": "unicornUIKit",
-  "version": "0.0.1",
-  "private": true,
+  "name": "react-native-unicorn-uikit",
+  "version": "0.0.3",
+  "private": false,
+  "author": "@ghashtag",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-native-village/react-native-unicorn/issues"
+  },
   "scripts": {
     "ios": "react-native run-ios --simulator='iPhone SE'",
     "android": "react-native run-android",
