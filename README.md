@@ -10,14 +10,7 @@ Install Dependencies
 
 # Step 1
 
-Launch storybook
 
-`yarn storybook`
 
 # Step 2
 
-`react-native run-ios`
-
-or
-
-`react-native run-android`
