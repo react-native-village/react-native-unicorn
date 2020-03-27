@@ -3,7 +3,8 @@ import React, { memo } from 'react'
 import { Platform, View, StyleSheet, TouchableOpacity } from 'react-native'
 import Emoji from 'react-native-emoji'
 import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet'
-import { PINK, BLUE, BG } from '../constants'
+import { useTheme } from '@react-navigation/native'
+import { BG } from '../constants'
 
 const circle = {
   width: 35,
@@ -19,14 +20,12 @@ const styles = StyleSheet.create({
   blue: {
     ...circle,
     height: 36,
-    width: 36,
-    backgroundColor: BLUE
+    width: 36
   },
   pink: {
     ...circle,
     top: 1,
-    height: 36.4,
-    backgroundColor: PINK
+    height: 36.4
   },
   iconBg: {
     ...circle,
@@ -48,10 +47,13 @@ type IconCircleT = {
 
 const IconCircle = memo<IconCircleT>(({ name, onPress, viewStyle }) => {
   const { container, pink, blue, iconBg, emoji } = styles
+  const {
+    colors: { primary, secondary }
+  } = useTheme()
   return (
     <TouchableOpacity onPress={onPress} style={[container, viewStyle]}>
-      <View style={blue}>
-        <View style={pink}>
+      <View style={[blue, { backgroundColor: primary }]}>
+        <View style={[pink, { backgroundColor: secondary }]}>
           <View style={iconBg}>
             <Emoji name={name} style={emoji} />
           </View>

@@ -1,6 +1,6 @@
 // @flow
 import React, { memo } from 'react'
-import { TextInput, Text, StyleSheet } from 'react-native'
+import { TextInput, StyleSheet, Text } from 'react-native'
 import { useTheme } from '@react-navigation/native'
 import { W } from '../constants'
 
@@ -62,18 +62,18 @@ const Input = memo<InputT>(
 
     const {
       dark,
-      body: { fontFamily, fontSize },
+      body: { fontSize },
       colors: { secondary, primary, placeholderTextColor }
     } = useTheme()
 
     const input = [
       inputStyle,
-      { color: dark ? primary : secondary, borderBottomColor: dark ? primary : secondary, fontFamily, fontSize }
+      { color: dark ? primary : secondary, borderBottomColor: dark ? primary : secondary, fontSize }
     ]
 
     const placeholderStyle = [
       inputStyle,
-      { color: placeholderTextColor, borderBottomColor: dark ? primary : secondary, fontFamily, fontSize }
+      { color: placeholderTextColor, borderBottomColor: dark ? primary : secondary, fontSize }
     ]
 
     return (

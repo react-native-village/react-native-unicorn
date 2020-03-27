@@ -29,6 +29,7 @@ import {
   CardCareer,
   CardResume,
   CardEducation,
+  Cost,
   Header,
   HeaderMaster,
   Button,
@@ -111,6 +112,8 @@ const UIKit = () => {
           <H8 title="H8" />
           <Space height={5} />
           <Body title="body" />
+          <Space height={10} />
+          <Cost title="500" />
           <Space height={90} />
         </View>
 

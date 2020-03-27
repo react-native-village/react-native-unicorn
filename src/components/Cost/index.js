@@ -1,7 +1,9 @@
 // @flow
 import React, { memo } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { Platform, StyleSheet, View } from 'react-native'
 import type { ViewStyleProp, TextStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet'
+import { useTheme } from '@react-navigation/native'
+import { CustomFontsProvider, Text } from 'react-native-custom-fonts'
 import { GREY } from '../constants'
 
 const styles = StyleSheet.create({
@@ -10,9 +12,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'flex-start'
   },
-  h4: {
+  h: {
     fontFamily: '3270Narrow',
-    fontSize: 18,
     color: GREY
   }
 })
@@ -24,11 +25,24 @@ type CostT = {
 }
 
 const Cost = memo<CostT>(({ title, viewStyle, textStyle }) => {
-  const { container, h4 } = styles
+  const { container, h } = styles
+  const {
+    h8: { fontFamily, fontSize, uri }
+  } = useTheme()
+  const fontFaces = [
+    {
+      fontFamily,
+      uri: uri || 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/3270Narrow.ttf'
+    }
+  ]
+  const size = Platform.OS === 'ios' ? 18 : 18
+  const flattenedStyle = StyleSheet.flatten([h, textStyle, { fontFamily, fontSize: fontSize || size }])
   return (
-    <View style={[container, viewStyle]}>
-      <Text style={[h4, textStyle]}>{`$ ${title}`}</Text>
-    </View>
+    <CustomFontsProvider fontFaces={fontFaces}>
+      <View style={[container, viewStyle]}>
+        <Text style={flattenedStyle}>{`$ ${title}`}</Text>
+      </View>
+    </CustomFontsProvider>
   )
 })
 

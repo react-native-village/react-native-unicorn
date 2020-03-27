@@ -35,10 +35,11 @@ const Body = memo<BodyT>(({ title, textStyle, numberOfLines, ellipsizeMode }) =>
   } = useTheme()
   const fontFaces = [
     {
-      fontFamily: fontFamily || 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/KLMN_Flash_Pix.ttf',
-      uri
+      fontFamily,
+      uri: uri || 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/KLMN_Flash_Pix.ttf'
     }
   ]
+
   const size = Platform.OS === 'ios' ? 12 : 12
   const flattenedStyle = StyleSheet.flatten([
     h,

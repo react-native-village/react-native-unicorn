@@ -1,8 +1,9 @@
 // @flow
 import React, { memo } from 'react'
-import { Platform, StyleSheet, Text } from 'react-native'
+import { Platform, StyleSheet } from 'react-native'
 import type { TextStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet'
 import { useTheme } from '@react-navigation/native'
+import { CustomFontsProvider, Text } from 'react-native-custom-fonts'
 
 const styles = StyleSheet.create({
   container: {
@@ -10,9 +11,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
-  h3: {
+  h: {
     textAlign: 'center',
-    fontSize: Platform.OS === 'ios' ? 21 : 21,
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 1
   }
@@ -24,12 +24,28 @@ type H3ForButtonT = {
 }
 
 const H3ForButton = memo<H3ForButtonT>(({ title, textStyle }) => {
-  const { h3 } = styles
+  const { h } = styles
   const {
-    h3: { fontFamily, color },
+    h3: { fontFamily, color, uri },
     colors: { secondary }
   } = useTheme()
-  return <Text style={[h3, textStyle, { color, fontFamily, textShadowColor: secondary }]}>{title}</Text>
+  const fontFaces = [
+    {
+      fontFamily: fontFamily || 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/KLMN_Flash_Pix.ttf',
+      uri
+    }
+  ]
+  const size = Platform.OS === 'ios' ? 21 : 21
+  const flattenedStyle = StyleSheet.flatten([
+    h,
+    textStyle,
+    { fontFamily, fontSize: size, color, textShadowColor: secondary }
+  ])
+  return (
+    <CustomFontsProvider fontFaces={fontFaces}>
+      <Text style={flattenedStyle}>{title}</Text>
+    </CustomFontsProvider>
+  )
 })
 
 export default H3ForButton
