@@ -28,6 +28,7 @@ const H1 = memo<H1T>(({ title, textStyle, numberOfLines, ellipsizeMode = 'tail' 
   const fontFaces = [
     {
       fontFamily,
+      fontWeight: 'Normal',
       uri: uri || 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/KLMN_Flash_Pix.ttf'
     }
   ]
@@ -35,7 +36,7 @@ const H1 = memo<H1T>(({ title, textStyle, numberOfLines, ellipsizeMode = 'tail' 
   const flattenedStyle = StyleSheet.flatten([
     h,
     textStyle,
-    { fontFamily, fontSize: fontSize || size, color, textShadowColor: secondary }
+    { fontFamily, fontSize: fontSize || size, color, textShadowColor: secondary, fontWeight: 'Normal' }
   ])
   return (
     <CustomFontsProvider fontFaces={fontFaces}>
