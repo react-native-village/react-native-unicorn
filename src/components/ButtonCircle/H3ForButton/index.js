@@ -1,9 +1,8 @@
 // @flow
 import React, { memo } from 'react'
-import { Platform, StyleSheet } from 'react-native'
+import { Platform, StyleSheet, Text } from 'react-native'
 import type { TextStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet'
 import { useTheme } from '@react-navigation/native'
-import { CustomFontsProvider, Text } from 'react-native-custom-fonts'
 
 const styles = StyleSheet.create({
   container: {
@@ -26,26 +25,11 @@ type H3ForButtonT = {
 const H3ForButton = memo<H3ForButtonT>(({ title, textStyle }) => {
   const { h } = styles
   const {
-    h3: { fontFamily, color, uri },
+    h3: { fontFamily, color },
     colors: { secondary }
   } = useTheme()
-  const fontFaces = [
-    {
-      fontFamily: fontFamily || 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/KLMN_Flash_Pix.ttf',
-      uri
-    }
-  ]
   const size = Platform.OS === 'ios' ? 21 : 21
-  const flattenedStyle = StyleSheet.flatten([
-    h,
-    textStyle,
-    { fontFamily, fontSize: size, color, textShadowColor: secondary }
-  ])
-  return (
-    <CustomFontsProvider fontFaces={fontFaces}>
-      <Text style={flattenedStyle}>{title}</Text>
-    </CustomFontsProvider>
-  )
+  return <Text style={[h, textStyle, { fontFamily, fontSize: size, color, textShadowColor: secondary }]}>{title}</Text>
 })
 
 export default H3ForButton

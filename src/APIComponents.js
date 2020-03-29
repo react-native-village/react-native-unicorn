@@ -6,28 +6,23 @@ const mainColor = {
 }
 
 const h0 = {
-  fontFamily: Platform.OS === 'ios' ? 'Etna' : 'etna-free-font',
-  uri: 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/etna-free-font.ttf'
+  fontFamily: Platform.OS === 'ios' ? 'Etna' : 'etna-free-font'
 }
 
 const h1 = {
-  fontFamily: Platform.OS === 'ios' ? 'KLMN-Flash-Pix' : 'KLMN_Flash_Pix',
-  uri: 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/KLMN_Flash_Pix.ttf'
+  fontFamily: Platform.OS === 'ios' ? 'KLMN-Flash-Pix' : 'KLMN_Flash_Pix'
 }
 
 const h2 = {
-  fontFamily: Platform.OS === 'ios' ? 'The Dolbak' : 'TheDolbak-Brush',
-  uri: 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/TheDolbak-Brush.ttf'
+  fontFamily: Platform.OS === 'ios' ? 'The Dolbak' : 'TheDolbak-Brush'
 }
 
 const h3 = {
-  fontFamily: Platform.OS === 'ios' ? 'KLMN-Flash-Pix' : 'KLMN_Flash_Pix',
-  uri: 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/KLMN_Flash_Pix.ttf'
+  fontFamily: Platform.OS === 'ios' ? 'KLMN-Flash-Pix' : 'KLMN_Flash_Pix'
 }
 
 const h4 = {
-  fontFamily: 'Avenir Next',
-  fontSize: 23
+  fontFamily: 'Avenir Next'
 }
 
 const h5 = {
@@ -35,23 +30,19 @@ const h5 = {
 }
 
 const h6 = {
-  fontFamily: Platform.OS === 'ios' ? 'KLMN-Flash-Pix' : 'KLMN_Flash_Pix',
-  uri: 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/KLMN_Flash_Pix.ttf'
+  fontFamily: Platform.OS === 'ios' ? 'KLMN-Flash-Pix' : 'KLMN_Flash_Pix'
 }
 
 const h7 = {
-  fontFamily: Platform.OS === 'ios' ? 'KLMN-Flash-Pix' : 'KLMN_Flash_Pix',
-  uri: 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/KLMN_Flash_Pix.ttf'
+  fontFamily: Platform.OS === 'ios' ? 'KLMN-Flash-Pix' : 'KLMN_Flash_Pix'
 }
 
 const h8 = {
-  fontFamily: '3270Narrow',
-  uri: 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/3270Narrow.ttf'
+  fontFamily: '3270Narrow'
 }
 
 const body = {
-  fontFamily: Platform.OS === 'ios' ? 'KLMN-Flash-Pix' : 'KLMN_Flash_Pix',
-  uri: 'https://s3.eu-central-1.wasabisys.com/ghashtag/fonts/KLMN_Flash_Pix.ttf'
+  fontFamily: Platform.OS === 'ios' ? 'KLMN-Flash-Pix' : 'KLMN_Flash_Pix'
 }
 
 const DarkTheme = {

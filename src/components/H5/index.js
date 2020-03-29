@@ -1,9 +1,8 @@
 // @flow
 import React, { memo } from 'react'
-import { Platform, StyleSheet } from 'react-native'
+import { Platform, StyleSheet, Text } from 'react-native'
 import type { TextStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet'
 import { useTheme } from '@react-navigation/native'
-import { CustomFontsProvider, Text } from 'react-native-custom-fonts'
 
 const styles = StyleSheet.create({
   h: {
@@ -19,21 +18,10 @@ type H5T = {
 const H5 = memo<H5T>(({ title, textStyle }) => {
   const { h } = styles
   const {
-    h5: { fontFamily, fontSize, color, uri }
+    h5: { fontFamily, fontSize, color }
   } = useTheme()
-  const fontFaces = [
-    {
-      fontFamily: fontFamily || 'Avenir Next',
-      uri
-    }
-  ]
   const size = Platform.OS === 'ios' ? 23 : 23
-  const flattenedStyle = StyleSheet.flatten([h, textStyle, { fontFamily, fontSize: fontSize || size, color }])
-  return (
-    <CustomFontsProvider fontFaces={fontFaces}>
-      <Text style={flattenedStyle}>{title}</Text>
-    </CustomFontsProvider>
-  )
+  return <Text style={[h, textStyle, { fontFamily, fontSize: fontSize || size, color }]}>{title}</Text>
 })
 
 export { H5 }
