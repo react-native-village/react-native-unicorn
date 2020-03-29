@@ -14,4 +14,6 @@ Install Dependencies
 
 # Step 2
 
-@all-contributors
+@all-contributors please add @kurbanovjasur for infrastructure, tests and code
+
+
