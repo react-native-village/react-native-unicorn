@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "kurbanovjasur",
+      "name": "Kurbanov Jasur",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/41279178?v=4",
+      "profile": "https://github.com/kurbanovjasur",
+      "contributions": [
+        "design",
+        "maintenance"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "react-native-unicorn",
+  "projectOwner": "react-native-village",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
