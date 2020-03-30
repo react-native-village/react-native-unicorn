@@ -1,0 +1,48 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "kurbanovjasur",
+      "name": "Kurbanov Jasur",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/41279178?v=4",
+      "profile": "https://github.com/kurbanovjasur",
+      "contributions": [
+        "design",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "gHashTag",
+      "name": "ДимкаРеактнативный",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6774813?v=4",
+      "profile": "https://medium.com/react-native-init",
+      "contributions": [
+        "content",
+        "doc",
+        "design",
+        "ideas",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "aeroluxx",
+      "name": "aeroluxx",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/38083916?v=4",
+      "profile": "https://github.com/aeroluxx",
+      "contributions": [
+        "maintenance",
+        "design"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "react-native-unicorn",
+  "projectOwner": "react-native-village",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
