@@ -44,7 +44,8 @@ import {
   ButtonText,
   Input,
   TabDeveloper,
-  TabCompany
+  TabCompany,
+  TextError
 } from './src/components'
 
 export {
@@ -92,6 +93,7 @@ export {
   Input,
   TabDeveloper,
   TabCompany,
+  TextError,
   ThemeProvider,
   DarkTheme,
   LightTheme
