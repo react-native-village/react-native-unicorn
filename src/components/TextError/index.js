@@ -1,6 +1,5 @@
 import React, { memo } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import { RED } from '../constants'
 
 const styles = StyleSheet.create({
   container: {
@@ -8,7 +7,7 @@ const styles = StyleSheet.create({
     margin: 10
   },
   h1: {
-    color: RED,
+    color: 'red',
     fontFamily: '3270Narrow',
     fontSize: 13
   }
