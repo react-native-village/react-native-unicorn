@@ -1,6 +1,6 @@
 {
   "name": "react-native-unicorn-uikit",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "private": false,
   "author": "@ghashtag",
   "license": "MIT",
@@ -8,7 +8,7 @@
     "url": "https://github.com/react-native-village/react-native-unicorn/issues"
   },
   "scripts": {
-    "ios": "react-native run-ios --simulator='iPhone SE'",
+    "ios": "react-native run-ios --simulator='iPhone X'",
     "android": "react-native run-android",
     "lint": "esw src/**",
     "lint-watch": "esw -w --changed src/**"
