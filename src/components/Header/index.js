@@ -3,16 +3,13 @@ import { TouchableOpacity, View, StyleSheet } from 'react-native'
 import { ifIphoneX } from 'react-native-iphone-x-helper'
 import { useTheme } from '@react-navigation/native'
 import Fontisto from 'react-native-vector-icons/Fontisto'
-import { W } from '../constants'
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
-    width: W,
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    paddingHorizontal: 6,
     backgroundColor: 'transparent',
     opacity: 0.8,
     ...ifIphoneX(
@@ -37,7 +34,7 @@ const styles = StyleSheet.create({
     )
   },
   rightIconStyle: {
-    fontSize: 35,
+    fontSize: 37,
     marginRight: 10,
     ...ifIphoneX(
       {
