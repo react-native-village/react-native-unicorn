@@ -14,25 +14,25 @@ const styles = StyleSheet.create({
 
 type CardVacanciesT = {
   obj: {
-    title: string,
+    position: string,
     description: string,
-    company: string,
-    cost: number
+    owner: string,
+    rate: number
   },
   onPress: Function,
   detail: boolean
 }
 
 const CardVacancies = memo<CardVacanciesT>(({ obj, onPress, detail }) => {
-  const { title, description, company, cost } = obj
+  const { position, description, owner, rate } = obj
   const { container } = styles
   const [star, setStar] = useState(false)
   return (
     <>
       <CardBorder>
         <View style={container}>
-          <H1 title={title} textStyle={{ width: W - 110 }} numberOfLines={1} />
-          <Star bool={star} onPress={() => setStar(!star)} />
+          <H1 title={position} textStyle={{ width: W - 110 }} numberOfLines={1} />
+          {false && <Star bool={star} onPress={() => setStar(!star)} />}
         </View>
         <Space height={20} />
         <TouchableOpacity onPress={onPress}>
@@ -40,8 +40,8 @@ const CardVacancies = memo<CardVacanciesT>(({ obj, onPress, detail }) => {
         </TouchableOpacity>
         <Space height={20} />
         <View style={container}>
-          <H7 title={company} textStyle={{ width: W - 140 }} numberOfLines={1} />
-          <H7 title={`$ ${cost}`} />
+          <H7 title={owner} textStyle={{ width: W - 140 }} numberOfLines={1} />
+          <H7 title={`$ ${rate}`} />
         </View>
       </CardBorder>
     </>

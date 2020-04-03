@@ -57,11 +57,10 @@ const cardIssueResponceSub = {
 }
 
 const cardVacancies = {
-  id: random.uuid(),
-  title: lorem.text(),
+  position: name.findName(),
+  rate: random.number(),
   description: lorem.paragraph(),
-  company: company.companyName(),
-  cost: random.number()
+  owner: name.findName()
 }
 
 const cardCareer = {

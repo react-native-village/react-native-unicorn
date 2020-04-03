@@ -9,7 +9,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     alignSelf: 'center',
     width: W - 30,
-    height: 40,
     borderBottomWidth: 2
   },
   errorStyle: {
@@ -28,6 +27,8 @@ type InputT = {
   onChangeText: Function,
   onBlur: Function,
   touched: {},
+  multiline: boolean,
+  numberOfLines: number,
   keyboardType:  // eslint-disable-line
     | 'default'
     | 'email-address'
@@ -57,24 +58,26 @@ const Input = memo<InputT>(
     touched,
     secureTextEntry,
     keyboardType,
+    multiline,
+    numberOfLines,
     autoCapitalize
   }) => {
     const { inputStyle, errorStyle } = styles
 
     const {
       dark,
-      body: { fontSize },
+      body: { fontFamily, fontSize },
       colors: { secondary, primary, placeholderTextColor }
     } = useTheme()
 
     const input = [
       inputStyle,
-      { color: dark ? primary : secondary, borderBottomColor: dark ? primary : secondary, fontSize }
+      { fontFamily, color: dark ? primary : secondary, borderBottomColor: dark ? primary : secondary, fontSize }
     ]
 
     const placeholderStyle = [
       inputStyle,
-      { color: placeholderTextColor, borderBottomColor: dark ? primary : secondary, fontSize }
+      { fontFamily, color: placeholderTextColor, borderBottomColor: dark ? primary : secondary, fontSize }
     ]
 
     return (
@@ -89,6 +92,8 @@ const Input = memo<InputT>(
           secureTextEntry={secureTextEntry}
           keyboardType={keyboardType}
           autoCapitalize={autoCapitalize}
+          multiline={multiline}
+          numberOfLines={numberOfLines}
         />
         {touched[name] && errors[name] ? (
           <Text style={errorStyle}>{errors[name]}</Text>
