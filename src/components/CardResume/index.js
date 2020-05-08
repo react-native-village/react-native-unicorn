@@ -1,7 +1,13 @@
 // @flow
 import React, { memo } from 'react'
 import { View, StyleSheet } from 'react-native'
-import { Avatar, CardBorder, CardInfo, H1, Space, Star, Rate } from '..'
+import {  H1  } from '../H1'
+import { Avatar } from '../Avatar'
+import { CardInfo } from '../CardInfo'
+import { CardBorder } from '../CardBorder'
+import { Star } from '../Star'
+import { Space } from '../Space'
+import { Rate } from  '../Rate'
 
 const styles = StyleSheet.create({
   starStyle: {

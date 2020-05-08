@@ -1,7 +1,12 @@
 //@flow
 import React, { memo } from 'react'
 import { StyleSheet, View, TouchableOpacity } from 'react-native'
-import { ButtonDeveloperSub, CardBorder, ButtonComments, H1, Body, Space } from '..'
+import { ButtonDeveloperSub } from '../ButtonDeveloperSub'
+import { H1 } from '../H1'
+import { CardBorder } from '../CardBorder'
+import { ButtonComments } from '../ButtonComments'
+import { Body } from '../Body'
+import { Space } from '../Space'
 
 const styles = StyleSheet.create({
   container: {

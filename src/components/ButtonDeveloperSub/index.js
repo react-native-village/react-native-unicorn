@@ -2,7 +2,9 @@
 import React, { memo } from 'react'
 import { Platform, StyleSheet, TouchableOpacity } from 'react-native'
 import type { ViewStyleProp, TextStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet'
-import { H7, Avatar, Rate } from '..'
+import { H7 } from '../H7'
+import { Rate } from '../Rate'
+import { Avatar } from  '../Avatar'
 import { W } from '../constants'
 
 const styles = StyleSheet.create({

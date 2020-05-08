@@ -1,7 +1,8 @@
 // @flow
 import React, { memo } from 'react'
 import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet'
-import { CardBorder, ButtonDeveloperSub } from '..'
+import { CardBorder } from '../CardBorder'
+import { ButtonDeveloperSub } from '../ButtonDeveloperSub'
 
 type DeveloperT = {
   title: string,

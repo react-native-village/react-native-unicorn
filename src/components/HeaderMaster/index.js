@@ -1,7 +1,12 @@
 // @flow
 import React, { memo } from 'react'
 import { Platform, StyleSheet, View } from 'react-native'
-import { Background, Avatar, Star, H1, IconCircle, Space } from '..'
+import { Background  } from '../Background'
+import {  H1  } from '../H1'
+import { Star } from '../Star'
+import { IconCircle } from '../IconCircle'
+import { Avatar } from '../Avatar'
+import { Space } from '../Space'
 import { Device } from '../constants'
 
 const styles = StyleSheet.create({

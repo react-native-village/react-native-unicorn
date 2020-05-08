@@ -1,7 +1,12 @@
 // @flow
 import React, { memo, useState } from 'react'
 import { View, StyleSheet, TouchableOpacity } from 'react-native'
-import { CardBorder, H1, H7, Space, Star, Body } from '..'
+import { H7  } from '../H7'
+import {  H1  } from '../H1'
+import { Body } from '../Body'
+import { CardBorder } from '../CardBorder'
+import { Star } from '../Star'
+import { Space } from '../Space'
 import { W } from '../constants'
 
 const styles = StyleSheet.create({

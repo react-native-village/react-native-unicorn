@@ -1,6 +1,10 @@
 // @flow
 import React, { memo } from 'react'
-import { CardBorder, Body, H7, Space, ButtonLink } from '..'
+import { CardBorder } from '../CardBorder'
+import { ButtonLink } from '../ButtonLink'
+import { H7 } from '../H7'
+import { Body } from '../Body'
+import { Space } from '../Space'
 
 type CardContactsT = {
   obj: {

@@ -2,7 +2,7 @@
 import React, { memo } from 'react'
 import { Platform, StyleSheet, TouchableOpacity } from 'react-native'
 import Emoji from 'react-native-emoji'
-import { H7 } from '..'
+import { H7 } from '../H7'
 
 const styles = StyleSheet.create({
   container: {

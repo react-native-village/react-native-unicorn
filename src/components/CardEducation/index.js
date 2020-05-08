@@ -1,6 +1,11 @@
 // @flow
 import React, { memo } from 'react'
-import { CardBorder, ButtonLink, H8, H7, Body, Space } from '..'
+import { H8 } from '../H8'
+import { CardBorder } from '../CardBorder'
+import { ButtonLink } from '../ButtonLink'
+import { H7 } from '../H7'
+import { Body } from '../Body'
+import { Space } from '../Space'
 
 type CardEducationT = {
   obj: {

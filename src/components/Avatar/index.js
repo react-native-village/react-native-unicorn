@@ -3,7 +3,7 @@ import React, { memo, useState } from 'react'
 import { StyleSheet, Image, TouchableOpacity, View } from 'react-native'
 import type { ViewStyleProp } from 'react-native/Libraries/StyleSheet/StyleSheet'
 import { useTheme } from '@react-navigation/native'
-import { Loading } from '..'
+import { Loading } from '../Loading'
 
 const styles = StyleSheet.create({
   container: {

@@ -1,7 +1,7 @@
 // @flow
 import React, { memo } from 'react'
 import { TouchableOpacity } from 'react-native'
-import { H8 } from '..'
+import { H8 } from '../H8'
 
 type ButtonTextT = {
   title: string,

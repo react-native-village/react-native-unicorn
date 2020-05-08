@@ -2,7 +2,9 @@ import React, { memo } from 'react'
 import { StyleSheet, View, ScrollView, ImageBackground } from 'react-native'
 import StatusBarAlert from 'react-native-statusbar-alert'
 import { useTheme } from '@react-navigation/native'
-import { Header, Space, Loading } from '..'
+import { Header  } from '../Header'
+import { Space } from '../Space'
+import { Loading } from  '../Loading'
 
 const styles = StyleSheet.create({
   container: {

@@ -1,6 +1,9 @@
 // @flow
 import React, { memo } from 'react'
-import { CardBorder, ButtonDeveloperSub, Space, Body } from '..'
+import { ButtonDeveloperSub } from '../ButtonDeveloperSub'
+import { CardBorder } from '../CardBorder'
+import { Body } from '../Body'
+import { Space } from '../Space'
 
 type Props = {
   obj: {

@@ -1,6 +1,7 @@
 // @flow
 import React, { memo } from 'react'
-import { CardBorder, Body } from '..'
+import { CardBorder } from '../CardBorder'
+import { Body } from '../Body'
 
 type CardT = {
   title: string
