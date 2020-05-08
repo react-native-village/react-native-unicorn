@@ -1,5 +1,5 @@
 import { Platform } from 'react-native'
-
+//
 const mainColor = {
   primary: '#50E3C2',
   secondary: '#ff06f4'
