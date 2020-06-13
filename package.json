@@ -13,7 +13,11 @@
     "lint": "esw src/**",
     "lint-watch": "esw -w --changed src/**"
   },
-  "precommit": "lint",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "prettier": {
     "singleQuote": true,
     "printWidth": 120,

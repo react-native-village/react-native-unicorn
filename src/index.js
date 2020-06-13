@@ -18,9 +18,7 @@ import { DarkTheme, LightTheme } from './APIComponents'
 const App: () => React$Node = () => {
   const [value, setValue] = useState(!false)
   //const scheme = useColorScheme()
-  const {
-    colors: { backgroundColor }
-  } = useTheme()
+  const { colors: { backgroundColor }} = useTheme()
   const dev = true
   return (
     <>
