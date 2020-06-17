@@ -75,7 +75,9 @@
     "prettier-eslint": "^9.0.1",
     "prop-types": "^15.7.2",
     "react-dom": "16.9.0",
-    "react-test-renderer": "16.9.0"
+    "react-native-typescript-transformer": "^1.2.13",
+    "react-test-renderer": "16.9.0",
+    "typescript": "^3.9.5"
   },
   "jest": {
     "preset": "react-native"
