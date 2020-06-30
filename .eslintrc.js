@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   parser: 'babel-eslint',
-  extends: ['airbnb', 'prettier', 'plugin:flowtype/recommended'], 
+  extends: ['airbnb', 'prettier','prettier/@typescript-eslint','prettier/react'],
   plugins: ['react', 'react-native', 'jsx-a11y', 'import', 'react-hooks'],
   parserOptions: {
     ecmaFeatures: {
@@ -38,10 +38,8 @@ module.exports = {
     'no-unused-expressions': 0,
     'global-require': 0,
     'max-len': 0,
-    'import/no-cycle': 0,
     'no-underscore-dangle': 0,
     'no-return-assign': 0,
-    'import/prefer-default-export': 0,
     'jsx-quotes': ['error', 'prefer-double'],
     'no-console': 'error',
     'arrow-parens': 0,
@@ -57,7 +55,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.ios.js', '.android.js']
+        extensions: ['.js', '.ios.js', '.android.js', '.tsx', '.ts',]
       }
     }
   }
