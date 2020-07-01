@@ -25,7 +25,7 @@ const UIKit = () => {
       <ScrollView style={[scrollView, { backgroundColor }]}>
         <View style={{ alignItems: 'center' }}>
           <Formik
-            initialValues={{ position: 'React Native', rate: 5000, description: faker.lorem.paragraph() }}
+            initialValues={{ position: 'React Native Developer', rate: 5000, description: faker.lorem.paragraph() }}
             onSubmit={values => _onPress(values)}
             validationSchema={Yup.object().shape({
               position: Yup.string()

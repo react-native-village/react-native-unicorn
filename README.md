@@ -1,6 +1,6 @@
 # Step 0
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Clone repo
@@ -33,6 +33,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/kurbanovjasur"><img src="https://avatars1.githubusercontent.com/u/41279178?v=4" width="100px;" alt=""/><br /><sub><b>Kurbanov Jasur</b></sub></a><br /><a href="#design-kurbanovjasur" title="Design">🎨</a> <a href="#maintenance-kurbanovjasur" title="Maintenance">🚧</a></td>
     <td align="center"><a href="https://medium.com/react-native-init"><img src="https://avatars0.githubusercontent.com/u/6774813?v=4" width="100px;" alt=""/><br /><sub><b>ДимкаРеактнативный</b></sub></a><br /><a href="#content-gHashTag" title="Content">🖋</a> <a href="https://github.com/react-native-village/react-native-unicorn/commits?author=gHashTag" title="Documentation">📖</a> <a href="#design-gHashTag" title="Design">🎨</a> <a href="#ideas-gHashTag" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-gHashTag" title="Maintenance">🚧</a></td>
     <td align="center"><a href="https://github.com/aeroluxx"><img src="https://avatars0.githubusercontent.com/u/38083916?v=4" width="100px;" alt=""/><br /><sub><b>aeroluxx</b></sub></a><br /><a href="#maintenance-aeroluxx" title="Maintenance">🚧</a> <a href="#design-aeroluxx" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/BatDroid"><img src="https://avatars0.githubusercontent.com/u/10198892?v=4" width="100px;" alt=""/><br /><sub><b>Alireza Ghamkhar</b></sub></a><br /><a href="#content-BatDroid" title="Content">🖋</a> <a href="https://github.com/react-native-village/react-native-unicorn/commits?author=BatDroid" title="Code">💻</a> <a href="#tutorial-BatDroid" title="Tutorials">✅</a></td>
   </tr>
 </table>
 
